@@ -158,3 +158,71 @@ $(function () {
         reader.readAsDataURL(file);
     });
 });
+
+// countdown timer
+// .js-countdown(data-countdown="2021-1-24 12:45:04")
+$(function () {
+    $(".js-countdown").each(function () {
+        let countdown = $(this).data("countdown");
+
+        if (!countdown) return;
+
+        let endTime = new Date(countdown).getTime();
+        let interval;
+
+        const buildClock = () => {
+            let thisTime = new Date().getTime();
+            let duration = endTime - thisTime;
+
+            if (duration < 0 && interval) {
+                clearInterval(interval);
+                return;
+            }
+
+            let seconds = Math.floor(duration / 1000 % 60);
+            let minutes = Math.floor(duration / (1000 * 60) % 60);
+            let hours = Math.floor(duration / (1000 * 60 * 60) % 24);
+            let days = Math.floor(duration / (1000 * 60 * 60 * 24));
+            let ampm = hours >= 12 ? "pm" : "am";
+
+            // hours = hours * 12;
+
+            seconds = ("0" + seconds).slice(-2);
+            minutes = ("0" + minutes).slice(-2);
+            hours = ("0" + hours).slice(-2);
+
+            $(this).html(getCountDownTemplate({
+                seconds,
+                minutes,
+                hours,
+                days,
+                ampm
+            }));
+        };
+
+        buildClock();
+
+        interval = setInterval(buildClock, 1000);
+    });
+
+    function getCountDownTemplate(timer = {}) {
+        return `
+<div class="banner-home__countdown-col">
+    <div class="banner-home__countdown-num">${timer.days}</div>
+    <div class="banner-home__countdown-label">ngày</div>
+</div>
+<div class="banner-home__countdown-col">
+    <div class="banner-home__countdown-num">${timer.hours}</div>
+    <div class="banner-home__countdown-label">giờ</div>
+</div>
+<div class="banner-home__countdown-col">
+    <div class="banner-home__countdown-num">${timer.minutes}</div>
+    <div class="banner-home__countdown-label">phút</div>
+</div>
+<div class="banner-home__countdown-col">
+    <div class="banner-home__countdown-num">${timer.seconds}</div>
+    <div class="banner-home__countdown-label">giây</div>
+</div>
+      `;
+    }
+});
