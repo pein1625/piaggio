@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <!-- Styles-->
+        <link rel="stylesheet" type="text/css" href="./css/libs.css" />
+        <link rel="stylesheet" type="text/css" href="./vendor/fontawesome-pro/css/all.min.css" />
+        <link rel="stylesheet" href="./vendor/select2/select2.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/app.css" />
+        <!-- Scripts-->
+        <script src="./js/libs.js" defer="defer"></script>
+        <script src="./vendor/select2/select2.min.js" defer="defer"></script>
+        <script src="./js/app.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="page">
+            <!-- header-->
+            <header class="header">
+                <div class="header__wrapper">
+                    <div class="container">
+                        <div class="header__inner"><a class="header__logo" href="./index.html"><img src="./images/logo.png" alt="" /></a>
+                            <div class="header__elements ms-2 ms-xl-3">
+                                <section class="navbar js-navbar">
+                                    <div class="navbar__backdrop js-navbar-toggle"></div>
+                                    <div class="navbar__wrapper">
+                                        <div class="navbar__header"><a class="navbar__logo" href="./index.html"><img src="./images/logo.png" alt="" /></a>
+                                            <button class="btn-toggle js-navbar-toggle ms-auto"></button>
+                                        </div>
+                                        <div class="navbar__body">
+                                            <ul class="menu menu-root">
+                                                <li class="menu-item"><a class="menu-link" href="./index.html">Trang chủ</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="./the-le.html">Thể lệ</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="./danh-sach-trung-thuong.html">Danh sách trúng thưởng</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="./lien-he-dai-ly.html">Liên hệ đại lý</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="h-dropdown ms-2 ms-xl-3"><a class="h-dropdown__toggle" href="#!"><img src="./images/gb.svg" alt="" /></a>
+                                <div class="h-dropdown__menu"><a class="h-dropdown__item" href="#!"><img src="./images/gb.svg" alt="" /><span>English</span></a><a class="h-dropdown__item" href="#!"><img src="./images/vn.svg" alt="" /><span>Tiếng Việt</span></a></div>
+                            </div>
+                            <div class="h-dropdown ms-2 ms-xl-3"><a class="h-dropdown__toggle" href="#!"><img src="./images/user-white.svg" alt="" /></a>
+                                <div class="h-dropdown__menu"><a class="h-dropdown__item" href="#!">Dropdown item 1</a><a class="h-dropdown__item" href="#!">Dropdown item 2</a><a class="h-dropdown__item" href="#!">Dropdown item 3</a><a class="h-dropdown__item" href="#!">Dropdown item 4</a></div>
+                            </div>
+                            <button class="btn-toggle text-white d-xl-none js-navbar-toggle ms-2"></button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="page__content">
+                <!-- main content-->
+                <section class="section">
+                    <div class="container">
+                        <h1 class="section__title text-white">Danh sách đại lý</h1>
+                        <div class="section__province">
+                            <select class="form-select js-select2" data-placeholder="Tỉnh / thành phố">
+                                <option>Tỉnh / thành phố</option>
+                                <option>Hà Nội</option>
+                                <option>Vĩnh Phúc</option>
+                                <option>Bắc Ninh</option>
+                                <option>Quảng Ninh</option>
+                                <option>Hải Dương</option>
+                                <option>Hải Phòng</option>
+                                <option>Hưng Yênx</option>
+                                <option>Thái Bình</option>
+                                <option>Hà Nam</option>
+                                <option>Nam Định</option>
+                                <option>Ninh Bình</option>
+                            </select>
+                        </div>
+                        <div class="data-tbl">
+                            <table class="table table-borderless js-datatable">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Đại lý</th>
+                                        <th>Số điện thoại</th>
+                                        <th>Email</th>
+                                        <th>Địa chỉ</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Công ty TNHH Mai Tiến Phát</td>
+                                        <td>0987654***</td>
+                                        <td>truongvanthang@gmail.com</td>
+                                        <td>Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Công ty TNHH Mai Tiến Phát</td>
+                                        <td>0987654***</td>
+                                        <td>truongvanthang@gmail.com</td>
+                                        <td>Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Công ty TNHH Mai Tiến Phát</td>
+                                        <td>0987654***</td>
+                                        <td>truongvanthang@gmail.com</td>
+                                        <td>Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>Công ty TNHH Mai Tiến Phát</td>
+                                        <td>0987654***</td>
+                                        <td>truongvanthang@gmail.com</td>
+                                        <td>Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>Công ty TNHH Mai Tiến Phát</td>
+                                        <td>0987654***</td>
+                                        <td>truongvanthang@gmail.com</td>
+                                        <td>Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                    <tr>
+                                        <td>06</td>
+                                        <td>Công ty TNHH Mai Tiến Phát</td>
+                                        <td>0987654***</td>
+                                        <td>truongvanthang@gmail.com</td>
+                                        <td>Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                    <tr>
+                                        <td>07</td>
+                                        <td>Công ty TNHH Mai Tiến Phát</td>
+                                        <td>0987654***</td>
+                                        <td>truongvanthang@gmail.com</td>
+                                        <td>Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                    <tr>
+                                        <td>08</td>
+                                        <td>Công ty TNHH Mai Tiến Phát</td>
+                                        <td>0987654***</td>
+                                        <td>truongvanthang@gmail.com</td>
+                                        <td>Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                    <tr>
+                                        <td>09</td>
+                                        <td>Công ty TNHH Mai Tiến Phát</td>
+                                        <td>0987654***</td>
+                                        <td>truongvanthang@gmail.com</td>
+                                        <td>Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Công ty TNHH Mai Tiến Phát</td>
+                                        <td>0987654***</td>
+                                        <td>truongvanthang@gmail.com</td>
+                                        <td>Số 18A đường Trường Chinh, quận Thanh Xuân, Hà Nội</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="data-tbl__footer">
+                                <div class="data-tbl__search">
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" placeholder="Tìm kiếm thông tin">
+                                        <button class="input-group-text" type="button"><i class="far fa-lg fa-search"></i></button>
+                                    </div>
+                                </div>
+                                <div class="data-tbl__content">
+                                    <div>Có <strong class="text-danger">93</strong> đại lý trong danh sách này</div>
+                                </div>
+                                <div class="data-tbl__pagination">
+                                    <ul class="pagination">
+                                        <li class="page-item disabled"><a class="page-link" href="#!"><i class="fal fa-angle-left"></i></a></li>
+                                        <li class="page-item active"><a class="page-link" href="#!">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#!">...</a></li>
+                                        <li class="page-item"><a class="page-link" href="#!">40</a></li>
+                                        <li class="page-item"><a class="page-link" href="#!">50</a></li>
+                                        <li class="page-item"><a class="page-link" href="#!"><i class="fal fa-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row g-3 justify-content-between">
+                        <div class="col-12 col-lg-auto">Copyright © 2024 PIAGGIO VIETNAM CO., LTD</div>
+                        <div class="col-12 col-lg-auto">
+                            <nav class="footer__nav"><a class="footer__link" href="#!">Terms and Conditions</a><a class="footer__link" href="#!">Privacy Policy</a><a class="footer__link" href="#!">Cookie Policy</a></nav>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- modals + sticky widgets-->
+        <button class="btn-movetop" type="button" data-target="body"><i class="fa fa-arrow-up"></i></button>
+    </body>
+</html>

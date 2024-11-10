@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <!-- Styles-->
+        <link rel="stylesheet" type="text/css" href="./css/libs.css" />
+        <link rel="stylesheet" type="text/css" href="./vendor/fontawesome-pro/css/all.min.css" />
+        <link rel="stylesheet" href="./vendor/select2/select2.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/app.css" />
+        <!-- Scripts-->
+        <script src="./js/libs.js" defer="defer"></script>
+        <script src="./vendor/select2/select2.min.js" defer="defer"></script>
+        <script src="./js/app.js" defer="defer"></script>
+    </head>
+    <body>
+        <div class="page">
+            <div class="page__content">
+                <!-- main content-->
+                <section class="s-page s-page--blue">
+                    <header class="s-page__header">
+                        <div class="container">
+                            <div class="s-page__header-inner"><a class="s-page__logo" href="./index.html"><img src="./images/logo.png" alt=""></a>
+                                <div class="s-page__header-title text-white">ĐĂNG KÝ QUAY TRÚNG THƯỞNG XE</div>
+                                <div class="s-page__header-desc text-white">
+                                    <p>Công ty Piaggio Việt Nam sẽ kiểm tra chi tiết từng thông tin khách hàng đăng ký, nếu có bất kỳ thông tin sai hoặc phát hiện gian lận, Đại lý sẽ phải chịu trách nhiệm.<br>Mỗi khách hàng chỉ được đăng ký một lần và không được chỉnh sửa. Vì vậy Đại lý cần kiểm tra thông tin kỹ trước khi hoàn tất đăng ký</p>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <main class="s-page__body">
+                        <div class="s-page__body-inner s-page__body-inner--scrollable">
+                            <div class="container-fluid">
+                                <form class="register-form js-register-form" action="#!">
+                                    <div class="row gy-2 gx-3">
+                                        <div class="col-xl-6">
+                                            <div class="row gy-2 gx-3">
+                                                <div class="col-lg-6">
+                                                    <label class="form-label">Họ và tên</label>
+                                                    <input class="form-control" type="text" name="fullname">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label class="form-label">Số điện thoại</label>
+                                                    <div class="input-group">
+                                                        <select class="form-select" style="flex: 0 0 80px;">
+                                                            <option>US</option>
+                                                            <option>VN</option>
+                                                            <option>CN</option>
+                                                            <option>CA</option>
+                                                        </select>
+                                                        <input class="form-control" type="text" name="phone">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label class="form-label">Địa chỉ khách hàng</label>
+                                                    <input class="form-control" type="text" name="address">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label class="form-label">Tỉnh/thành phố</label>
+                                                    <input class="form-control" type="text" name="province">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label">Số CMND/Số hộ khẩu/Hộ chiếu</label>
+                                                    <div class="position-relative">
+                                                        <input class="form-control" type="text" name="id_number">
+                                                        <div class="register-form__upload-btns">
+                                                            <!-- todo hapk upload to show preview-->
+                                                            <label class="register-form__upload-btn">
+                                                                <input class="js-file-input" type="file" data-preview=".js-preview-id-front" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải mặt trước</span>
+                                                            </label>
+                                                            <label class="register-form__upload-btn">
+                                                                <input class="js-file-input" type="file" data-preview=".js-preview-id-back" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải mặt sau</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Nơi đăng ký CMND</label>
+                                                        <input class="form-control" type="text" name="id_place">
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-label">Ngày cấp CMND</label>
+                                                        <div class="input-group input-group-custom">
+                                                            <input class="form-control js-datepicker" type="text" name="id_date"><span class="input-group-text"><i class="fal fa-fw fa-calendar-alt"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="row gy-2 gx-3">
+                                                        <div class="col-6">
+                                                            <div class="cccd-preview js-preview-id-front"></div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="cccd-preview js-preview-id-back"></div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="text-gray fs-12">* Đối với sổ hộ khẩu hoặc hộ chiều thì chỉ tải lên ở nút “Tải mặt trước”<br>* Đối với CMND phải tải lên cả hai mặt</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="row gy-2 gx-3">
+                                                <div class="col-12">
+                                                    <label class="form-label">Mã hàng hóa</label>
+                                                    <input class="form-control" type="text" name="product_code">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label class="form-label">Số khung</label>
+                                                    <input class="form-control" type="text" name="chassis_number" placeholder="">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <label class="form-label">Số máy</label>
+                                                    <div class="input-group">
+                                                        <select class="form-select" style="flex: 0 0 100px;">
+                                                            <option>ABCDE</option>
+                                                            <option>ABCDE</option>
+                                                            <option>ABCDE</option>
+                                                            <option>ABCDE</option>
+                                                        </select>
+                                                        <input class="form-control" type="text" name="machine_number" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="form-label">Số hóa đơn</label>
+                                                    <div class="position-relative">
+                                                        <input class="form-control" type="text" name="bill_number">
+                                                        <div class="register-form__upload-btns">
+                                                            <label class="register-form__upload-btn">
+                                                                <input class="js-file-input" type="file" data-preview=".js-preview-bill" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải hình ảnh</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 me-auto">
+                                                    <label class="form-label">Ngày hóa đơn</label>
+                                                    <div class="input-group input-group-custom">
+                                                        <input class="form-control js-datepicker" type="text" name="bill_date"><span class="input-group-text"><i class="fal fa-fw fa-calendar-alt"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="cccd-preview js-preview-bill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 text-center text-danger">Kiểm tra kỹ thông tin trước khi nhấn nút</div>
+                                        <div class="col-lg-4">
+                                            <div class="text-gray fs-12">Ghi chú: Mỗi số iện thoại chỉ được đăng ký 1 lần duy nhất. Trường hợp khách hàng mua nhiều xe và muốn đăng ký bằng các số điện thoại khác nhau, đại lý vui lòng liên hệ đại diện bán hàng của Piaggio Việt Nam để ược hỗ trợ.</div>
+                                        </div>
+                                        <div class="col-lg-4 text-center">
+                                            <button class="button button--block text-uppercase js-open-confirm-modal" type="button">Hoàn thành & quay thưởng</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </main>
+                    <footer class="s-page__footer">
+                        <div class="container">
+                            <nav class="s-page__nav"><a class="button" href="./program.html">Trang chủ</a><a class="button" href="./rule.html">Thể lệ</a><a class="button active" href="./register.html">Đăng ký</a><a class="button" href="./customers.html">Danh sách khách hàng</a><a class="button" href="./profile.html">Thông tin người dùng</a></nav>
+                        </div>
+                    </footer>
+                </section>
+                <!-- todo hapk update data to modal confirm-->
+                <div class="md-confirm modal fade" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3 class="md-confirm__title">XÁC NHẬN THÔNG TIN</h3>
+                                <div class="md-confirm__grid">
+                                    <div class="md-confirm__col">
+                                        <div class="row gy-2 gx-3">
+                                            <div class="col-lg-6">
+                                                <div class="md-confirm__field" data-name="fullname"><span>Họ và tên:</span><strong></strong></div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="md-confirm__field" data-name="phone"><span>Số điện thoại:</span><strong></strong></div>
+                                            </div>
+                                            <div class="col-lg-9">
+                                                <div class="md-confirm__field" data-name="address"><span>Địa chỉ:</span><strong></strong></div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="md-confirm__field" data-name="province"><span>Tỉnh/TP:</span><strong></strong></div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="md-confirm__field" data-name="id_number"><span>Số CMND/CCCD:</span><strong></strong></div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="md-confirm__field" data-name="id_place"><span>Nơi đăng ký:</span><strong></strong></div>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <div class="md-confirm__field" data-name="id_date"><span>Ngày cấp:</span><strong></strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="md-confirm__col">
+                                        <div class="row gy-2 gx-3">
+                                            <div class="col-6">
+                                                <div class="cccd-preview js-modal-preview-id-front"></div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="cccd-preview js-modal-preview-id-back"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="md-confirm__col">
+                                        <div class="row gy-2 gx-3">
+                                            <div class="col-12">
+                                                <div class="md-confirm__field" data-name="product_code"><span>Ký hiệu:</span><strong></strong></div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="md-confirm__field" data-name="chassis_number"><span>Số khung:</span><strong></strong></div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="md-confirm__field" data-name="machine_number"><span>Số máy:</span><strong></strong></div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="md-confirm__field" data-name="bill_number"><span>Số hoá đơn</span><strong></strong></div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="md-confirm__field" data-name="bill_date"><span>Ngày hoá đơn</span><strong></strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="md-confirm__col">
+                                        <div class="bill-preview js-modal-preview-bill"></div>
+                                    </div>
+                                </div>
+                                <div class="text-center text-danger my-4 font-italic">Kiểm tra kỹ thông tin trước khi nhấn nút</div>
+                                <div class="row gy-2 gx-40 justify-content-center">
+                                    <div class="col-lg-5">
+                                        <button class="button button--block button--red text-uppercase" type="button" data-bs-dismiss="modal">Chỉnh sửa thông tin</button>
+                                    </div>
+                                    <div class="col-lg-5">
+                                        <button class="button button--block text-uppercase js-modal-confirm-submit" type="button">Hoàn thành & quay thưởng</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modals + sticky widgets-->
+        <button class="btn-movetop" type="button" data-target="body"><i class="fa fa-arrow-up"></i></button>
+    </body>
+</html>
