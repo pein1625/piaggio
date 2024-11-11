@@ -226,3 +226,9 @@ $(function () {
       `;
     }
 });
+
+$(function () {
+    $('.js-open-modal-gift').on('click', function () {
+        $('.md-gift').modal('show');
+    });
+});
