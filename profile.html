@@ -17,102 +17,151 @@
     </head>
     <body>
         <div class="page">
-            <div class="page__content">
-                <!-- main content-->
-                <section class="s-page s-page--blue">
-                    <header class="s-page__header">
-                        <div class="container">
-                            <div class="s-page__header-inner"><a class="s-page__logo" href="./index.html"><img src="./images/logo.png" alt=""></a>
-                                <div class="s-page__header-title text-white">THÔNG TIN NGƯỜI DÙNG</div>
+            <header class="header">
+                <div class="header__wrapper">
+                    <div class="container">
+                        <div class="header__inner"><a class="header__logo" href="./index.html"><img src="./images/logo-2.png" alt="" /></a>
+                            <div class="header__elements ms-2 ms-xl-3"></div>
+                            <div class="h-dropdown ms-2 ms-xl-3"><a class="h-dropdown__toggle" href="#!"><span class="me-3">Đại lý Piaggio Xuân Cầu</span><img src="./images/user-white.svg" alt="" /></a>
+                                <div class="h-dropdown__menu"><a class="h-dropdown__item" href=".md-login" data-bs-toggle="modal">Login</a><a class="h-dropdown__item" href="#!">Dropdown item 2</a><a class="h-dropdown__item" href="#!">Dropdown item 3</a><a class="h-dropdown__item" href="#!">Dropdown item 4</a></div>
                             </div>
                         </div>
-                    </header>
-                    <main class="s-page__body">
-                        <div class="s-page__body-inner s-page__body-inner--scrollable">
-                            <div class="container-fluid">
-                                <div class="profile">
-                                    <div class="profile__left">
-                                        <div class="user">
-                                            <div class="user__avatar">
-                                                <div class="user__avatar-frame"><img src="https://i.pinimg.com/564x/dd/0e/86/dd0e86cc6c9ae4bc0473c762e275f9c4.jpg" alt=""></div>
-                                                <label class="user__avatar-upload">
-                                                    <input type="file"><i class="fal fa-fw fa-camera"></i>
-                                                </label>
-                                            </div>
-                                            <div class="user__point">16000 điểm</div>
-                                            <div class="user__name">Nguyễn Văn A</div>
-                                            <div class="user__pos">Chức vụ</div>
+                    </div>
+                </div>
+            </header>
+            <div class="page__content">
+                <!-- main content-->
+                <section class="section section--page"><img class="section__bg" src="./images/rule-bg.jpg" alt="">
+                    <div class="section__backdrop"></div>
+                    <div class="container">
+                        <div class="section__inner">
+                            <div class="section__header">
+                                <div class="section__title text-white mb-0">THÔNG TIN NGƯỜI DÙNG</div>
+                            </div>
+                            <div class="section__body">
+                                <div class="section__content">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <section class="section-2">
+                                                <h2 class="section-2__title">Thông tin cá nhân</h2>
+                                                <div class="section-2__body">
+                                                    <div class="profile__table">
+                                                        <table class="table table-borderless">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Họ và tên</td>
+                                                                    <td>Nguyễn Văn A</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Mã nhân viên</td>
+                                                                    <td>1234567</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Giới tính</td>
+                                                                    <td>Nam</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Số điện thoại</td>
+                                                                    <td>0123456789</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Ngày sinh</td>
+                                                                    <td>01/12/1999</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Email</td>
+                                                                    <td>example@gmail.com</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Chức danh</td>
+                                                                    <td>Nhân viên quản trị hệ thống</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Đơn vị</td>
+                                                                    <td>Tổng Công ty CP Công trình Viettel</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Địa chỉ</td>
+                                                                    <td>Số 06 Phạm Văn Bạch, phường Yên Hòa, quận Cầu Giấy, Hà Nội</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </section>
                                         </div>
-                                        <ul class="profile-menu">
-                                            <li><a href="#!"><i class="fal fa-fw fa-th-large me-2"></i><span>Dashboard</span></a></li>
-                                            <li><a href="#!"><i class="fal fa-fw fa-user me-2"></i><span>Hồ sơ cá nhân</span></a></li>
-                                            <li><a href="#!"><i class="fal fa-fw fa-file-certificate me-2"></i><span>Chứng chỉ</span></a></li>
-                                            <li><a href="#!"><i class="fal fa-fw fa-chart-bar me-2"></i><span>Số lượng khách</span></a></li>
-                                            <li><a href="#!"><i class="fal fa-fw fa-bell me-2"></i><span>Thông báo</span></a></li>
-                                            <li><a href="#!"><i class="fal fa-fw fa-key me-2"></i><span>Đổi mật khẩu</span></a></li>
-                                            <li><a href="#!"><i class="fal fa-fw fa-sign-out me-2"></i><span>Đăng xuất</span></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="profile__right">
-                                        <h1 class="profile__title">Hồ sơ cá nhân</h1>
-                                        <div class="profile__body">
-                                            <div class="profile__table">
-                                                <table class="table table-borderless">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Họ và tên</td>
-                                                            <td>Nguyễn Văn A</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Mã nhân viên</td>
-                                                            <td>1234567</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Giới tính</td>
-                                                            <td>Nam</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Số điện thoại</td>
-                                                            <td>0123456789</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Ngày sinh</td>
-                                                            <td>01/12/1999</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Email</td>
-                                                            <td>example@gmail.com</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Chức danh</td>
-                                                            <td>Nhân viên quản trị hệ thống</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Đơn vị</td>
-                                                            <td>Tổng Công ty CP Công trình Viettel</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Địa chỉ</td>
-                                                            <td>Số 06 Phạm Văn Bạch, phường Yên Hòa, quận Cầu Giấy, Hà Nội</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                        <div class="col-lg-4">
+                                            <section class="section-2">
+                                                <h2 class="section-2__title">Đổi mật khẩu</h2>
+                                                <div class="section-2__body">
+                                                    <form action="#!">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Mật khẩu cũ</label>
+                                                            <input class="form-control" type="password">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Mật khẩu mới</label>
+                                                            <input class="form-control" type="password">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Nhập lại mật khẩu mới</label>
+                                                            <input class="form-control" type="password">
+                                                        </div>
+                                                        <button class="button button--secondary button--block" type="submit">Đổi mật khẩu</button>
+                                                    </form>
+                                                </div>
+                                            </section>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="section__footer">
+                                <nav class="page-nav"><a class="button" href="./program.html">Trang chủ</a><a class="button" href="./rule.html">Thể lệ</a><a class="button" href="./register.html">Đăng ký</a><a class="button" href="./customers.html">Danh sách khách hàng</a><a class="button active" href="./profile.html">Thông tin người dùng</a></nav>
+                            </div>
                         </div>
-                    </main>
-                    <footer class="s-page__footer">
-                        <div class="container">
-                            <nav class="s-page__nav"><a class="button" href="./program.html">Trang chủ</a><a class="button" href="./rule.html">Thể lệ</a><a class="button" href="./register.html">Đăng ký</a><a class="button" href="./customers.html">Danh sách khách hàng</a><a class="button active" href="./profile.html">Thông tin người dùng</a></nav>
-                        </div>
-                    </footer>
+                    </div>
                 </section>
             </div>
         </div>
         <!-- modals + sticky widgets-->
         <button class="btn-movetop" type="button" data-target="body"><i class="fa fa-arrow-up"></i></button>
+        <div class="md-login modal fade" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="md-login__logo"><img src="./images/logo.png" alt="" /></div>
+                        <div class="md-login__title">Chào mừng</div>
+                        <div class="md-login__desc">Bạn đang đăng nhập với tư cách thành viên</div>
+                        <div class="md-login__form">
+                            <div class="mb-3">
+                                <label class="form-label">Tên đăng nhập</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mật khẩu</label>
+                                <div class="input-group md-login__password">
+                                    <input class="form-control" type="password" />
+                                    <button class="input-group-text js-toggle-show-password" type="button"><i class="fal fa-eye"></i><i class="fal fa-eye-slash"></i></button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="row g-3 justify-content-between">
+                                    <div class="col-auto">
+                                        <label class="checkbox-styled">
+                                            <input class="checkbox-styled__input" type="checkbox" name="checkbox" /><span class="checkbox-styled__icon"></span><span>Lưu mật khẩu</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-auto"><a class="md-login__link fw-700" href="#!">Quên mật khẩu?</a></div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <button class="md-login__submit button" type="submit">Đăng nhập</button>
+                            </div>
+                        </div>
+                        <div class="md-login__copyright">Copyright © 2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

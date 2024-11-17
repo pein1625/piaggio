@@ -207,21 +207,21 @@ $(function () {
 
     function getCountDownTemplate(timer = {}) {
         return `
-<div class="banner-home__countdown-col">
-    <div class="banner-home__countdown-num">${timer.days}</div>
-    <div class="banner-home__countdown-label">ngày</div>
+<div class="countdown__item">
+    <strong>${timer.days}</strong>
+    <span">ngày</span>
 </div>
-<div class="banner-home__countdown-col">
-    <div class="banner-home__countdown-num">${timer.hours}</div>
-    <div class="banner-home__countdown-label">giờ</div>
+<div class="countdown__item">
+    <strong>${timer.hours}</strong>
+    <span">giờ</span>
 </div>
-<div class="banner-home__countdown-col">
-    <div class="banner-home__countdown-num">${timer.minutes}</div>
-    <div class="banner-home__countdown-label">phút</div>
+<div class="countdown__item">
+    <strong>${timer.minutes}</strong>
+    <span">phút</span>
 </div>
-<div class="banner-home__countdown-col">
-    <div class="banner-home__countdown-num">${timer.seconds}</div>
-    <div class="banner-home__countdown-label">giây</div>
+<div class="countdown__item">
+    <strong>${timer.seconds}</strong>
+    <span">giây</span>
 </div>
       `;
     }
