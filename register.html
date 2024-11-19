@@ -94,10 +94,10 @@
                                                             <div class="register-form__upload-btns">
                                                                 <!-- todo hapk upload to show preview-->
                                                                 <label class="register-form__upload-btn js-front-upload-btn">
-                                                                    <input class="js-file-input" type="file" data-preview=".js-preview-id-front" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải mặt trước</span>
+                                                                    <input class="js-file-input" id="input-file-front" type="file" data-preview=".js-preview-id-front" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải mặt trước</span>
                                                                 </label>
                                                                 <label class="register-form__upload-btn js-back-upload-btn">
-                                                                    <input class="js-file-input" type="file" data-preview=".js-preview-id-back" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải mặt sau</span>
+                                                                    <input class="js-file-input" id="input-file-back" type="file" data-preview=".js-preview-id-back" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải mặt sau</span>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -117,10 +117,20 @@
                                                     <div class="col-lg-6">
                                                         <div class="row gy-2 gx-3">
                                                             <div class="col-6">
-                                                                <div class="cccd-preview js-preview-id-front"></div>
+                                                                <div class="cccd-preview js-preview-id-front">
+                                                                    <div class="cccd-preview__overlay">
+                                                                        <label class="cccd-preview__btn" for="input-file-front"><i class="fal fa-fw fa-pencil"></i></label>
+                                                                        <button class="cccd-preview__btn js-clear-file-input" type="button" data-target="#input-file-front"><i class="fal fa-fw fa-trash-alt"></i></button>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="col-6 js-show-back-photo">
-                                                                <div class="cccd-preview js-preview-id-back"></div>
+                                                                <div class="cccd-preview js-preview-id-back">
+                                                                    <div class="cccd-preview__overlay">
+                                                                        <label class="cccd-preview__btn" for="input-file-back"><i class="fal fa-fw fa-pencil"></i></label>
+                                                                        <button class="cccd-preview__btn js-clear-file-input" type="button" data-target="#input-file-back"><i class="fal fa-fw fa-trash-alt"></i></button>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="col-12">
                                                                 <div class="text-gray fs-12">* Đối với sổ hộ khẩu hoặc hộ chiều thì chỉ tải lên ở nút “Tải mặt trước”<br>* Đối với CCCD phải tải lên cả hai mặt</div>
@@ -157,7 +167,7 @@
                                                             <input class="form-control" type="text" name="bill_number">
                                                             <div class="register-form__upload-btns">
                                                                 <label class="register-form__upload-btn">
-                                                                    <input class="js-file-input" type="file" data-preview=".js-preview-bill" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải hình ảnh</span>
+                                                                    <input class="js-file-input" id="input-file-bill" type="file" data-preview=".js-preview-bill" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải hình ảnh</span>
                                                                 </label>
                                                             </div>
                                                         </div>
@@ -169,7 +179,12 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-3">
-                                                        <div class="cccd-preview js-preview-bill"></div>
+                                                        <div class="cccd-preview js-preview-bill">
+                                                            <div class="cccd-preview__overlay">
+                                                                <label class="cccd-preview__btn" for="input-file-bill"><i class="fal fa-fw fa-pencil"></i></label>
+                                                                <button class="cccd-preview__btn js-clear-file-input" type="button" data-target="#input-file-bill"><i class="fal fa-fw fa-trash-alt"></i></button>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -212,7 +227,7 @@
                                                 <div class="md-confirm__field" data-name="province"><span>Tỉnh/TP:</span><strong></strong></div>
                                             </div>
                                             <div class="col-lg-6">
-                                                <div class="md-confirm__field" data-name="id_number"><span>Số CMND/CCCD:</span><strong></strong></div>
+                                                <div class="md-confirm__field" data-name="id_number"><span class="js-label-number">Số CCCD:</span><strong></strong></div>
                                             </div>
                                             <div class="col-lg-3">
                                                 <div class="md-confirm__field" data-name="id_place"><span>Nơi đăng ký:</span><strong></strong></div>
@@ -227,7 +242,7 @@
                                             <div class="col-6">
                                                 <div class="cccd-preview js-modal-preview-id-front"></div>
                                             </div>
-                                            <div class="col-6">
+                                            <div class="col-6 js-show-back-photo">
                                                 <div class="cccd-preview js-modal-preview-id-back"></div>
                                             </div>
                                         </div>
