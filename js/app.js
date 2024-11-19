@@ -232,3 +232,34 @@ $(function () {
         $('.md-gift').modal('show');
     });
 });
+
+$(function () {
+    $('.js-input-cccd').on('change', function () {
+        if (this.checked) {
+            showCCCDField();
+        } else {
+            hideCCCDField();
+        }
+    });
+
+    $('.js-input-shk, .js-input-passport').on('change', function () {
+        if (!this.checked) {
+            showCCCDField();
+        } else {
+            const text = $(this).hasClass('js-input-shk') ? 'Tải sổ hộ khẩu' : 'Tải hộ chiếu';
+            hideCCCDField(text);
+        }
+    });
+});
+
+function showCCCDField() {
+    $('.js-show-for-cccd').removeClass('hide-field');
+    $('.js-back-upload-btn').removeClass('d-none');
+    $('.js-front-upload-btn').find('span').text('Tải mặt trước');
+}
+
+function hideCCCDField(btnText) {
+    $('.js-show-for-cccd').addClass('hide-field');
+    $('.js-back-upload-btn').addClass('d-none');
+    $('.js-front-upload-btn').find('span').text(btnText);
+}

@@ -72,26 +72,42 @@
                                                         <input class="form-control" type="text" name="province">
                                                     </div>
                                                     <div class="col-12">
-                                                        <label class="form-label">Số CMND/Số hộ khẩu/Hộ chiếu</label>
+                                                        <div class="d-flex">
+                                                            <div class="me-2">
+                                                                <label class="radio-styled">
+                                                                    <input class="radio-styled__input js-input-cccd" type="radio" name="type_of_id" /><span class="radio-styled__icon"></span>&nbsp;Số CCCD
+                                                                </label>
+                                                            </div>
+                                                            <div class="me-2">
+                                                                <label class="radio-styled">
+                                                                    <input class="radio-styled__input js-input-shk" type="radio" name="type_of_id" /><span class="radio-styled__icon"></span>&nbsp;Số hộ khẩu
+                                                                </label>
+                                                            </div>
+                                                            <div class="me-2">
+                                                                <label class="radio-styled">
+                                                                    <input class="radio-styled__input js-input-passport" type="radio" name="type_of_id" /><span class="radio-styled__icon"></span>&nbsp;Hộ chiếu
+                                                                </label>
+                                                            </div>
+                                                        </div>
                                                         <div class="position-relative">
                                                             <input class="form-control" type="text" name="id_number">
                                                             <div class="register-form__upload-btns">
                                                                 <!-- todo hapk upload to show preview-->
-                                                                <label class="register-form__upload-btn">
+                                                                <label class="register-form__upload-btn js-front-upload-btn">
                                                                     <input class="js-file-input" type="file" data-preview=".js-preview-id-front" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải mặt trước</span>
                                                                 </label>
-                                                                <label class="register-form__upload-btn">
+                                                                <label class="register-form__upload-btn js-back-upload-btn">
                                                                     <input class="js-file-input" type="file" data-preview=".js-preview-id-back" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải mặt sau</span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6">
-                                                        <div class="mb-3">
+                                                        <div class="mb-3 js-show-for-cccd">
                                                             <label class="form-label">Nơi đăng ký CMND</label>
                                                             <input class="form-control" type="text" name="id_place">
                                                         </div>
-                                                        <div>
+                                                        <div class="js-show-for-cccd">
                                                             <label class="form-label">Ngày cấp CMND</label>
                                                             <div class="input-group input-group-custom">
                                                                 <input class="form-control js-datepicker" type="text" name="id_date"><span class="input-group-text"><i class="fal fa-fw fa-calendar-alt"></i></span>
@@ -103,11 +119,11 @@
                                                             <div class="col-6">
                                                                 <div class="cccd-preview js-preview-id-front"></div>
                                                             </div>
-                                                            <div class="col-6">
+                                                            <div class="col-6 js-show-for-cccd">
                                                                 <div class="cccd-preview js-preview-id-back"></div>
                                                             </div>
                                                             <div class="col-12">
-                                                                <div class="text-gray fs-12">* Đối với sổ hộ khẩu hoặc hộ chiều thì chỉ tải lên ở nút “Tải mặt trước”<br>* Đối với CMND phải tải lên cả hai mặt</div>
+                                                                <div class="text-gray fs-12">* Đối với sổ hộ khẩu hoặc hộ chiều thì chỉ tải lên ở nút “Tải mặt trước”<br>* Đối với CCCD phải tải lên cả hai mặt</div>
                                                             </div>
                                                         </div>
                                                     </div>
