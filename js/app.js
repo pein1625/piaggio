@@ -247,19 +247,37 @@ $(function () {
             showCCCDField();
         } else {
             const text = $(this).hasClass('js-input-shk') ? 'Tải sổ hộ khẩu' : 'Tải hộ chiếu';
-            hideCCCDField(text);
+            const shk = $(this).hasClass('js-input-shk');
+            hideCCCDField(text, shk);
         }
     });
 });
 
 function showCCCDField() {
-    $('.js-show-for-cccd').removeClass('hide-field');
+    $('.js-show-back-photo').removeClass('hide-field');
     $('.js-back-upload-btn').removeClass('d-none');
     $('.js-front-upload-btn').find('span').text('Tải mặt trước');
+    $('.js-show-label').removeClass('d-none');
+    $('.js-label-place').text('Nơi cấp CCCD');
+    $('.js-label-date').text('Ngày cấp CCCD');
 }
 
-function hideCCCDField(btnText) {
-    $('.js-show-for-cccd').addClass('hide-field');
+function hideCCCDField(btnText, shk) {
+    if (shk) {
+        $('.js-show-label').addClass('d-none');
+    } else {
+        $('.js-show-label').removeClass('d-none');
+    }
+
+    $('.js-show-back-photo').addClass('hide-field');
     $('.js-back-upload-btn').addClass('d-none');
     $('.js-front-upload-btn').find('span').text(btnText);
+    $('.js-label-place').text('Nơi cấp hộ chiếu');
+    $('.js-label-date').text('Ngày cấp hộ chiếu');
 }
+
+$(function () {
+    $('.box').on('click', function () {
+        $(this).toggleClass('active');
+    });
+});
