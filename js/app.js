@@ -292,3 +292,69 @@ $(function () {
         $(this).toggleClass('active');
     });
 });
+
+$(function () {
+    $('.js-giftbox').on('click', function () {});
+});
+
+$(function () {
+    const $game = $('.game');
+    const $box = $('.box');
+    const url = $game.data('url');
+
+    console.log('url', url);
+
+    $('.giftbox__img').on('click', function () {
+        $game.addClass('picked');
+        $(this).addClass('active');
+
+        const pos = $(this).data('pos');
+
+        $box.addClass('picked-' + pos);
+
+        setTimeout(function () {
+            callApi(url);
+        }, 2500);
+    });
+});
+
+function callApi(url) {
+    $.ajax({
+        url: url,
+        method: 'get',
+        success: function (res) {
+            if (res.error && res.error.message) {
+                handleError(res.error.message);
+                return;
+            }
+
+            const prizeType = res.message;
+
+            if (!['first', 'second', 'third', 'fourth', 'consolation'].includes(prizeType)) {
+                handleError('Đã xảy ra lỗi, vui lòng thử lại sau');
+                console.log('API trả về ko prize type ko đúng: ', res);
+                return;
+            }
+
+            handleSuccess(res.message);
+        },
+        error: function (e) {
+            handleSuccess(e.message);
+        }
+    });
+}
+
+function handleSuccess(prizeType) {
+    const $game = $('.game');
+
+    console.log('handleSuccess');
+
+    $game.addClass('show');
+    $game.addClass(prizeType);
+}
+
+function handleError(errMsg) {
+    alert(errMsg);
+}
+
+// todo hapk chờ vài giây thì hiển thị text lên
