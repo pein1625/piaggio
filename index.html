@@ -56,9 +56,10 @@
             </header>
             <div class="page__content">
                 <!-- main content-->
-                <section class="section py-0"><img class="section__bg" src="./images/banner.jpg" alt="">
+                <section class="section py-0"><img class="section__bg d-none d-md-block" src="./images/banner-bg.jpg" alt=""><img class="banner-items d-none d-md-block" src="./images/banner-items.png" alt="">
+                    <div class="mobile-bg d-md-none"><img class="mobile-bg__1" src="./images/mobile-bg-1.jpg" alt=""><img class="mobile-bg__2" src="./images/mobile-bg-2.png" alt=""><img class="mobile-bg__3" src="./images/mobile-bg-3.png" alt=""></div>
                     <div class="container">
-                        <div class="section__inner">
+                        <div class="section__inner pt-30 pb-0 pb-md-30">
                             <div class="section__body"></div>
                             <div class="section__footer">
                                 <div class="banner">
@@ -77,7 +78,7 @@
                 <section class="section py-0"><img class="section__bg" src="./images/rule-bg.jpg" alt="">
                     <div class="section__backdrop"></div>
                     <div class="container">
-                        <div class="section__inner">
+                        <div class="section__inner pt-90">
                             <div class="section__header">
                                 <h2 class="section__title text-white">Thể lệ chương trình khuyến mại</h2>
                                 <h3 class="section__subtitle text-white">“LÊN XE SANG, ĐÓN NGÀN LỘC”</h3>
@@ -116,7 +117,7 @@
                 </section>
                 <section class="section">
                     <div class="texture-2"></div>
-                    <div class="container">
+                    <div class="container pt-60">
                         <h2 class="section__title text-white">Danh sách trúng thưởng</h2>
                         <nav class="n-tab"><a class="js-filter-btn button button--secondary" href="#!" data-filter="this_week">Tuần này</a><a class="js-filter-btn button" href="#!" data-filter="this_month">Tháng này</a><a class="js-filter-btn button" href="#!" data-filter="all">Từ đầu chương trình</a></nav>
                         <div class="data-tbl">
@@ -132,14 +133,14 @@
                                         <th>Đại lý</th>
                                     </tr>
                                 </thead>
-                                <tbody></tbody>
+                                <tbody style="min-height: 355px;"></tbody>
                             </table>
                         </div>
                     </div>
                 </section>
                 <section class="section h-contact">
                     <div class="texture-1"></div>
-                    <div class="container">
+                    <div class="container pt-60">
                         <h2 class="section__title text-white">Liên hệ đại lý</h2>
                         <div class="section__desc text-white">Hãy là những khách hàng đầu tiên tham gia và trúng giải thưởng của chương trình</div>
                         <div class="mt-50">
@@ -163,7 +164,7 @@
                                                 <label class="form-label">Địa chỉ</label>
                                                 <input class="form-control" type="text">
                                             </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-12">
                                                 <label class="form-label">Đại lý</label>
                                                 <select class="form-select js-select2">
                                                     <option>XUÂN CẦU PIAGGIO</option>
@@ -172,7 +173,7 @@
                                                     <option>ĐÔNG CẦU PIAGGIO</option>
                                                 </select>
                                             </div>
-                                            <div class="col-lg-6">
+                                            <div class="col-12">
                                                 <label class="form-label">Loại xe quan tâm</label>
                                                 <select class="form-select js-select2">
                                                     <option>Loại xe 1</option>
@@ -258,7 +259,7 @@
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <button class="md-login__submit button" type="submit">Đăng nhập</button>
+                                <button class="md-login__submit button button--secondary" type="submit">Đăng nhập</button>
                             </div>
                         </div>
                         <div class="md-login__copyright">Copyright © 2024</div>

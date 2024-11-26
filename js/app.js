@@ -140,18 +140,29 @@ $(function () {
 
         if (!$target.length) return;
 
-        $target.removeClass('active').find('img').remove();
+        $target.removeClass('active').find('img, iframe').remove();
 
         const file = event.target.files[0];
 
+        console.log('file', file);
+
         if (!file) return;
+
+        const isPdf = file.type === 'application/pdf';
 
         const reader = new FileReader();
 
         reader.onload = function (e) {
             const url = e.target.result;
             $target.addClass('active');
-            $target.append(`<img src="${url}" alt="" />`);
+
+            if (isPdf) {
+                $target.append(`
+<iframe src="${url}" />
+                `);
+            } else {
+                $target.append(`<img src="${url}" alt="" />`);
+            }
         };
 
         reader.readAsDataURL(file);
@@ -406,5 +417,43 @@ $(function () {
         const filter = $(this).data('filter');
 
         dataTable.ajax.url(url + '?filter=' + filter).load();
+    });
+});
+
+$(function () {
+    $('.register-form__nav-btn').on('click', function () {
+        if ($(this).hasClass('active')) {
+            return false;
+        }
+
+        const target = $(this).data('target');
+        const $target = $(target);
+
+        if (!$target.length) return;
+
+        $('.register-form__nav-btn').removeClass('active');
+        $(this).addClass('active');
+
+        $('.register-form__tab').removeClass('active');
+        $target.addClass('active');
+    });
+});
+
+$(function () {
+    $('.pf-page__nav-btn').on('click', function () {
+        if ($(this).hasClass('active')) {
+            return false;
+        }
+
+        const target = $(this).data('target');
+        const $target = $(target);
+
+        if (!$target.length) return;
+
+        $('.pf-page__nav-btn').removeClass('active');
+        $(this).addClass('active');
+
+        $('.pf-page__tab').removeClass('active');
+        $target.addClass('active');
     });
 });

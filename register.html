@@ -24,8 +24,8 @@
                     <div class="container">
                         <div class="header__inner"><a class="header__logo" href="./index.html"><img src="./images/logo-2.png" alt="" /></a>
                             <div class="header__elements ms-2 ms-xl-3"></div>
-                            <div class="h-dropdown ms-2 ms-xl-3"><a class="h-dropdown__toggle" href="#!"><span class="me-3">Đại lý Piaggio Xuân Cầu</span><img src="./images/user-white.svg" alt="" /></a>
-                                <div class="h-dropdown__menu"><a class="h-dropdown__item" href=".md-login" data-bs-toggle="modal">Login</a><a class="h-dropdown__item" href="#!">Dropdown item 2</a><a class="h-dropdown__item" href="#!">Dropdown item 3</a><a class="h-dropdown__item" href="#!">Dropdown item 4</a></div>
+                            <div class="h-dropdown ms-2 ms-xl-3"><a class="h-dropdown__toggle" href="#!"><span class="me-3 d-none d-md-inline">Đại lý Piaggio Xuân Cầu</span><img src="./images/user-white.svg" alt="" /></a>
+                                <div class="h-dropdown__menu"><a class="h-dropdown__item" href=".md-login" data-bs-toggle="modal">Login</a><a class="h-dropdown__item" href="#!">Trang chủ</a><a class="h-dropdown__item" href="#!">Thể lệ</a><a class="h-dropdown__item" href="#!">Đăng ký</a><a class="h-dropdown__item" href="#!">Danh sách khách hàng</a><a class="h-dropdown__item" href="#!">Thông tin người dùng</a></div>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,13 @@
                                 <div class="section__content">
                                     <form class="register-form js-register-form" action="#!">
                                         <div class="row gy-2 gx-3">
-                                            <div class="col-xl-6">
+                                            <div class="col-12">
+                                                <div class="register-form__nav">
+                                                    <div class="register-form__nav-btn active" data-target=".js-personal-tab">Thông tin khách hàng</div>
+                                                    <div class="register-form__nav-btn" data-target=".js-product-tab">Thông tin sản phẩm</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 register-form__tab js-personal-tab active">
                                                 <div class="row gy-2 gx-3">
                                                     <div class="col-lg-6">
                                                         <label class="form-label">Họ và tên</label>
@@ -104,7 +110,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6">
+                                                    <div class="col-lg-6 register-form__sort-last-mobile">
                                                         <div class="mb-3 js-show-label">
                                                             <label class="form-label js-label-place">Nơi đăng ký CCCD</label>
                                                             <input class="form-control" type="text" name="id_place">
@@ -141,7 +147,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-6">
+                                            <div class="col-xl-6 register-form__tab js-product-tab">
                                                 <div class="row gy-2 gx-3">
                                                     <div class="col-12">
                                                         <label class="form-label">Mã hàng hóa</label>
@@ -169,12 +175,12 @@
                                                             <input class="form-control" type="text" name="bill_number">
                                                             <div class="register-form__upload-btns">
                                                                 <label class="register-form__upload-btn">
-                                                                    <input class="js-file-input" id="input-file-bill" type="file" data-preview=".js-preview-bill" accept="image/png, image/jpeg"><i class="fal fa-fw fa-upload me-2"></i><span>Tải hình ảnh</span>
+                                                                    <input class="js-file-input" id="input-file-bill" type="file" data-preview=".js-preview-bill" accept="application/pdf"><i class="fal fa-fw fa-upload me-2"></i><span>Tải hình ảnh</span>
                                                                 </label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-6 me-auto">
+                                                    <div class="col-lg-6 me-auto register-form__sort-last-mobile">
                                                         <label class="form-label">Ngày hóa đơn</label>
                                                         <div class="input-group input-group-custom">
                                                             <input class="form-control js-datepicker" type="text" name="bill_date"><span class="input-group-text"><i class="fal fa-fw fa-calendar-alt"></i></span>
@@ -212,6 +218,7 @@
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-body">
+                                <button class="modal-close" type="button" data-bs-dismiss="modal"><i class="fal fa-times"></i></button>
                                 <h3 class="md-confirm__title">XÁC NHẬN THÔNG TIN</h3>
                                 <div class="md-confirm__grid">
                                     <div class="md-confirm__col">
@@ -273,12 +280,12 @@
                                     </div>
                                 </div>
                                 <div class="text-center text-danger my-4 font-italic">Kiểm tra kỹ thông tin trước khi nhấn nút</div>
-                                <div class="row gy-2 gx-40 justify-content-center">
-                                    <div class="col-lg-5">
-                                        <button class="button button--block button--red text-uppercase" type="button" data-bs-dismiss="modal">Chỉnh sửa thông tin</button>
+                                <div class="row gy-2 gx-2 gx-lg--40 justify-content-center">
+                                    <div class="col-6 col-lg-5">
+                                        <button class="button button--block button--red text-uppercase" type="button" data-bs-dismiss="modal">Chỉnh sửa <span class="d-none d-md-inline">thông tin</span></button>
                                     </div>
-                                    <div class="col-lg-5">
-                                        <button class="button button--block button--secondary text-uppercase js-modal-confirm-submit" type="button">Hoàn thành & quay thưởng</button>
+                                    <div class="col-6 col-lg-5">
+                                        <button class="button button--block button--secondary text-uppercase js-modal-confirm-submit" type="button"><span class="d-none d-md-inline">Hoàn thành &</span> quay thưởng</button>
                                     </div>
                                 </div>
                             </div>
@@ -319,7 +326,7 @@
                                 </div>
                             </div>
                             <div class="mt-4">
-                                <button class="md-login__submit button" type="submit">Đăng nhập</button>
+                                <button class="md-login__submit button button--secondary" type="submit">Đăng nhập</button>
                             </div>
                         </div>
                         <div class="md-login__copyright">Copyright © 2024</div>
